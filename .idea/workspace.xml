@@ -4,217 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ laptopshop_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/migrations/0002_customuser_date_joined_alter_customuser_last_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/accounts/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/laptops/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie/dist/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie/dist/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/cookie/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-client.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-client.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-profiling.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-profiling.profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server-legacy.browser.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server-legacy.browser.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.browser.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.browser.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.bun.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.bun.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.edge.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.edge.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.node.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-server.node.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-test-utils.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom-test-utils.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom.react-server.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/cjs/react-dom.react-server.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/client.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/profiling.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/react-dom.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/server.browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/server.bun.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/server.edge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/server.node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/server.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/static.browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/static.edge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/static.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/static.node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/static.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-dom/test-utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/dist/index.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/dist/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/dist/index.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router-dom/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/chunk-DQRVZFIR.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/dom-export.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/dom-export.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/dom-export.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/dom-export.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/index.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/index.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/lib-B8x_tOvL.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/lib/types/internal.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/lib/types/internal.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/lib/types/internal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/lib/types/internal.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/register-BkDIKxVz.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/register-DeIo2iHO.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/development/route-data-WyrduLgj.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/chunk-UG2XJOVM.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/dom-export.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/dom-export.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/dom-export.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/dom-export.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/index.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/index.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/lib-B8x_tOvL.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/lib/types/internal.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/lib/types/internal.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/lib/types/internal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/lib/types/internal.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/register-BkDIKxVz.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/register-DeIo2iHO.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/dist/production/route-data-WyrduLgj.d.mts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react-router/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-compiler-runtime.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-compiler-runtime.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-compiler-runtime.profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-dev-runtime.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-dev-runtime.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-dev-runtime.profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-dev-runtime.react-server.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-dev-runtime.react-server.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-runtime.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-runtime.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-runtime.profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-runtime.react-server.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react-jsx-runtime.react-server.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react.react-server.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/cjs/react.react-server.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/compiler-runtime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/jsx-dev-runtime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/jsx-dev-runtime.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/jsx-runtime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/jsx-runtime.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/react/react.react-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler-unstable_mock.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler-unstable_mock.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler-unstable_post_task.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler-unstable_post_task.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler.native.development.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler.native.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/cjs/scheduler.production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/index.native.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/unstable_mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/scheduler/unstable_post_task.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/set-cookie-parser/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/set-cookie-parser/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/set-cookie-parser/lib/set-cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/set-cookie-parser/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/orders/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/LaptopCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/LaptopList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Laptop.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/axiosInstance.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
+    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="registe/login/profile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/migrations/0002_customuser_date_joined_alter_customuser_last_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LaptopCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LaptopList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Laptop.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/axiosInstance.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
         <option value="JSX File" />
       </list>
     </option>
@@ -234,6 +53,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kape25&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kape25/noteboock.git&quot;,
+    &quot;accountId&quot;: &quot;cc00f7b2-5ea2-47d7-a8ba-ca9b14e3190c&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -242,30 +73,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "ts.external.directory.path": "E:\\PyCharm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\PyCharm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ laptopshop_project\frontend\public" />
+      <recent name="F:\ laptopshop_project\frontend\src\components" />
       <recent name="F:\ laptopshop_project\frontend\hocks" />
       <recent name="F:\ laptopshop_project\frontend\src\services" />
       <recent name="F:\ laptopshop_project\frontend\src\pages" />
-      <recent name="F:\ laptopshop_project\frontend\src\components" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -285,11 +123,27 @@
       <updated>1748359721317</updated>
       <workItem from="1748359722057" duration="12364000" />
       <workItem from="1748521650397" duration="30229000" />
-      <workItem from="1748611340381" duration="8691000" />
+      <workItem from="1748611340381" duration="19542000" />
+      <workItem from="1748795716582" duration="5342000" />
+      <workItem from="1748967314393" duration="10325000" />
+      <workItem from="1748990606981" duration="3422000" />
     </task>
+    <task id="LOCAL-00001" summary="registe/login/profile">
+      <option name="closed" value="true" />
+      <created>1748628576860</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748628576860</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="registe/login/profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="registe/login/profile" />
   </component>
 </project>

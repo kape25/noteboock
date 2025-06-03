@@ -1,30 +1,31 @@
 from rest_framework import serializers
-from .models import CustomUser
-from django.contrib.auth import authenticate
+from django.contrib.auth import get_user_model
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
+User = get_user_model()
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+        token['nickname'] = user.nickname
+        return token
+
+
+class RegisterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['nickname', 'email', 'first_name', 'last_name', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        return user
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CustomUser
-        fields = ['id', 'nickname', 'first_name', 'last_name', 'email', 'avatar']
+        model = User
+        fields = ['id', 'nickname', 'email', 'first_name', 'last_name', 'avatar']
+        extra_kwargs = {'avatar': {'required': False}}
 
-class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
-
-    class Meta:
-        model = CustomUser
-        fields = ['nickname', 'email', 'first_name', 'last_name', 'password']  # ← Убрали avatar
-
-    def create(self, validated_data):
-        password = validated_data.pop('password')
-        return CustomUser.objects.create_user(password=password, **validated_data)
-
-class LoginSerializer(serializers.Serializer):
-    nickname = serializers.CharField()
-    password = serializers.CharField()
-
-    def validate(self, data):
-        user = authenticate(**data)
-        if user and user.is_active:
-            return user
-        raise serializers.ValidationError("Incorrect Credentials")
