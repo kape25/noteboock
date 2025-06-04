@@ -38,9 +38,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Адрес вашего React-приложения
+]
 AUTH_USER_MODEL = 'accounts.User'
 ROOT_URLCONF = 'config.urls'
+CORS_ALLOW_CREDENTIALS = True
+
 
 TEMPLATES = [
     {

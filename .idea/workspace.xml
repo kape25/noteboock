@@ -4,36 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="registe/login/profile">
+    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="рабочий проект">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/migrations/0002_customuser_date_joined_alter_customuser_last_login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/laptops/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/laptops/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/laptops/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LaptopCard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LaptopList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Laptop.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/axiosInstance.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
         <option value="JSX File" />
       </list>
     </option>
@@ -99,11 +93,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ laptopshop_project\backend" />
       <recent name="F:\ laptopshop_project\frontend\public" />
-      <recent name="F:\ laptopshop_project\frontend\src\components" />
-      <recent name="F:\ laptopshop_project\frontend\hocks" />
-      <recent name="F:\ laptopshop_project\frontend\src\services" />
-      <recent name="F:\ laptopshop_project\frontend\src\pages" />
+      <recent name="F:\ laptopshop_project\frontend\src\pages\ShopHomepage" />
+      <recent name="F:\ laptopshop_project\frontend\js" />
+      <recent name="F:\ laptopshop_project\frontend\src\assets" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -127,6 +121,7 @@
       <workItem from="1748795716582" duration="5342000" />
       <workItem from="1748967314393" duration="10325000" />
       <workItem from="1748990606981" duration="3422000" />
+      <workItem from="1749063918746" duration="11053000" />
     </task>
     <task id="LOCAL-00001" summary="registe/login/profile">
       <option name="closed" value="true" />

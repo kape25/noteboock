@@ -1,8 +1,7 @@
-# serializers.py
 from rest_framework import serializers
-from .models import Laptop
+from .models import Product
 
-class LaptopSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Laptop
-        fields = ['id', 'name', 'brand', 'price', 'specs', 'image', 'in_stock']
+        model = Product
+        fields = ['id', 'name', 'description', 'price', 'image', 'stock', 'in_stock']

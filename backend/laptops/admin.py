@@ -1,10 +1,10 @@
-# admin.py
-from django.contrib import admin
-from .models import Laptop
 
-@admin.register(Laptop)
+from django.contrib import admin
+from .models import Product
+
+@admin.register(Product)
 class LaptopAdmin(admin.ModelAdmin):
-    list_display = ('name', 'brand', 'price', 'in_stock')
-    search_fields = ('name', 'brand')
-    list_filter = ('brand', 'in_stock')
+    list_display = ('name', 'description', 'price', 'in_stock','image')
+    search_fields = ('name', 'description')
+    list_filter = ('name', 'price')
     ordering = ('-price',)

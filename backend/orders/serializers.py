@@ -1,19 +1,24 @@
 from rest_framework import serializers
-from .models import Order, OrderItem, Laptop
-from laptops.serializers import LaptopSerializer
+from .models import CartItem
+from laptops.models import Product
 
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ['id', 'name', 'price', 'image']
 
-class OrderItemSerializer(serializers.ModelSerializer):
-    laptop = LaptopSerializer()
+class CartItemSerializer(serializers.ModelSerializer):
+    product = ProductSerializer()
 
     class Meta:
-        model = OrderItem
-        fields = ['laptop', 'quantity']
+        model = CartItem
+        fields = ['id', 'product', 'quantity']
 
-class OrderSerializer(serializers.ModelSerializer):
-    items = OrderItemSerializer(source='orderitem_set', many=True)
-
+class CartItemCreateSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
-        fields = ['id', 'user', 'created_at', 'items']
+        model = CartItem
+        fields = ['product', 'quantity']
+
+
+
 

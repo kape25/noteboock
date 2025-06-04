@@ -1,12 +1,12 @@
 from django.db import models
 
-class Laptop(models.Model):
-    name = models.CharField(max_length=100)
-    brand = models.CharField(max_length=100)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    specs = models.TextField()
-    image = models.ImageField(upload_to='laptops/')
-    in_stock = models.PositiveIntegerField(default=0)
+class Product(models.Model):
+    name = models.CharField('Название', max_length=255)
+    description = models.TextField('Описание')
+    price = models.DecimalField('Цена', max_digits=10, decimal_places=2)  # Исправлено здесь
+    image = models.ImageField('Изображение', upload_to='products/', null=True, blank=True)
+    stock = models.PositiveIntegerField(default=0)
+    in_stock = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
