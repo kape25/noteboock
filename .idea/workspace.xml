@@ -5,29 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="рабочий проект">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/OrderPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/ProductDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/catalog.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/laptops/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/laptops/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/laptops/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/orders/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +31,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Python Script" />
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -93,9 +87,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ laptopshop_project\frontend\src\pages\ShopHomepage" />
       <recent name="F:\ laptopshop_project\backend" />
       <recent name="F:\ laptopshop_project\frontend\public" />
-      <recent name="F:\ laptopshop_project\frontend\src\pages\ShopHomepage" />
       <recent name="F:\ laptopshop_project\frontend\js" />
       <recent name="F:\ laptopshop_project\frontend\src\assets" />
     </key>
@@ -121,7 +115,10 @@
       <workItem from="1748795716582" duration="5342000" />
       <workItem from="1748967314393" duration="10325000" />
       <workItem from="1748990606981" duration="3422000" />
-      <workItem from="1749063918746" duration="11053000" />
+      <workItem from="1749063918746" duration="11369000" />
+      <workItem from="1749110373773" duration="1999000" />
+      <workItem from="1749118943770" duration="20108000" />
+      <workItem from="1749297847893" duration="4036000" />
     </task>
     <task id="LOCAL-00001" summary="registe/login/profile">
       <option name="closed" value="true" />
@@ -131,14 +128,34 @@
       <option name="project" value="LOCAL" />
       <updated>1748628576860</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="рабочий проект">
+      <option name="closed" value="true" />
+      <created>1749075421762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749075421762</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="registe/login/profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="registe/login/profile" />
+    <MESSAGE value="рабочий проект" />
+    <option name="LAST_COMMIT_MESSAGE" value="рабочий проект" />
   </component>
 </project>

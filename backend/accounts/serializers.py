@@ -7,17 +7,21 @@ from django.utils.translation import gettext_lazy as _
 
 User = get_user_model()
 
+
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
+        # Добавляем все необходимые данные о пользователе
         token['nickname'] = user.nickname
+        token['is_staff'] = user.is_staff
+        token['is_superuser'] = user.is_superuser
+        token['email'] = user.email
         return token
 
     def validate(self, attrs):
-        # Переопределяем метод validate, чтобы использовать nickname вместо username
         credentials = {
-            'username': attrs.get('nickname'),  # Используем nickname как username
+            'username': attrs.get('nickname'),
             'password': attrs.get('password')
         }
 
@@ -25,11 +29,22 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
             user = authenticate(**credentials)
 
             if user:
+                if not user.is_active:
+                    raise ValidationError({'detail': _('Аккаунт неактивен')})
+
                 data = {}
                 refresh = self.get_token(user)
 
                 data['refresh'] = str(refresh)
                 data['access'] = str(refresh.access_token)
+
+                # Добавляем информацию о пользователе в ответ
+                data['user'] = {
+                    'nickname': user.nickname,
+                    'email': user.email,
+                    'is_staff': user.is_staff,
+                    'is_superuser': user.is_superuser
+                }
                 return data
             else:
                 raise ValidationError({'detail': _('Неверные учетные данные')})
@@ -51,6 +66,12 @@ class RegisterSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'nickname', 'email', 'first_name', 'last_name', 'avatar']
-        extra_kwargs = {'avatar': {'required': False}}
+        fields = ['id', 'nickname', 'email', 'first_name', 'last_name', 'avatar', 'is_staff', 'is_superuser']
+        extra_kwargs = {
+            'avatar': {'required': False},
+            'is_staff': {'read_only': True},
+            'is_superuser': {'read_only': True}
+        }
+
+
 
