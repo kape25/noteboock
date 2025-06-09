@@ -126,6 +126,7 @@ const ProductDetail = () => {
         },
         body: JSON.stringify(orderData),
       });
+      console.log('Отправляемый JSON:', orderData);
 
       if (!response.ok) throw new Error('Ошибка оформления заказа');
 

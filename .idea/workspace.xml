@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="рабочий проект">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/OrderPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/ProductDetail.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/catalog.jsx" afterDir="false" />
+    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="рабочий проект(добавил карточки, оформление заказа)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/laptops/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/laptops/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/ProductDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/ProductDetail.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +103,8 @@
       <workItem from="1749063918746" duration="11369000" />
       <workItem from="1749110373773" duration="1999000" />
       <workItem from="1749118943770" duration="20108000" />
-      <workItem from="1749297847893" duration="4036000" />
+      <workItem from="1749297847893" duration="8566000" />
+      <workItem from="1749476321562" duration="12477000" />
     </task>
     <task id="LOCAL-00001" summary="registe/login/profile">
       <option name="closed" value="true" />
@@ -136,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749075421762</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="рабочий проект(добавил карточки, оформление заказа)">
+      <option name="closed" value="true" />
+      <created>1749302625050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749302625050</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="registe/login/profile" />
     <MESSAGE value="рабочий проект" />
-    <option name="LAST_COMMIT_MESSAGE" value="рабочий проект" />
+    <MESSAGE value="рабочий проект(добавил карточки, оформление заказа)" />
+    <option name="LAST_COMMIT_MESSAGE" value="рабочий проект(добавил карточки, оформление заказа)" />
   </component>
 </project>
