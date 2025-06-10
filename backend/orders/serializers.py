@@ -3,6 +3,9 @@ from .models import Order, OrderItem, CartItem
 from rest_framework.exceptions import ValidationError
 from laptops.models import Product
 
+from accounts.serializers import UserSerializer
+
+
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
@@ -31,11 +34,10 @@ class CartItemSerializer(serializers.ModelSerializer):
 
 class OrderItemSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
-    total = serializers.ReadOnlyField(source='price * quantity')
 
     class Meta:
         model = OrderItem
-        fields = ['product', 'quantity', 'price', 'total']
+        fields = ['product', 'quantity', 'price']
 
 
 class OrderCreateSerializer(serializers.ModelSerializer):
@@ -112,12 +114,15 @@ class OrderCreateSerializer(serializers.ModelSerializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     items = OrderItemSerializer(many=True, read_only=True)
-    user = serializers.StringRelatedField()
-    total_price = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+    user = UserSerializer(read_only=True)
 
     class Meta:
         model = Order
-        fields = '__all__'
+        fields = [
+            'id', 'user', 'full_name', 'email', 'phone', 'address',
+            'delivery_method', 'payment_method', 'total_price',
+            'status', 'created_at', 'items'
+        ]
 
 
 

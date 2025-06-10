@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Link } from "react-router-dom";
-import Slider from "react-slick"; // Импорт слайдера
+import Slider from "react-slick";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Toast } from 'bootstrap';
 
 // Стили для слайдера
 import "slick-carousel/slick/slick.css";
@@ -23,35 +25,35 @@ const ShopHomepage = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  // Добавление в корзину
   const addToCart = async (productId) => {
-    try {
-      const token = localStorage.getItem('access');
-      if (!token) {
-        alert('Вы не авторизованы');
-        return;
-      }
-
-      const response = await fetch('http://localhost:8000/api/cart/add/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-        body: JSON.stringify({ product_id: productId }),
-      });
-
-      if (!response.ok) throw new Error('Ошибка добавления в корзину');
-
-      alert('Товар добавлен в корзину');
-    } catch (err) {
-      console.error(err);
-      alert('Ошибка добавления в корзину');
+  try {
+    const token = localStorage.getItem('access');
+    if (!token) {
+      alert('Вы не авторизованы');
+      return;
     }
-  };
 
-  if (loading) return <div>Загрузка...</div>;
-  if (error) return <div>{error}</div>;
+    const response = await fetch('http://localhost:8000/api/cart/add/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify({ product_id: productId }),
+    });
+
+    if (!response.ok) throw new Error('Ошибка добавления в корзину');
+
+    // Показываем Toast
+    const toastEl = document.getElementById('cartToast');
+    const bsToast = new Toast(toastEl);
+    bsToast.show();
+
+  } catch (err) {
+    console.error(err);
+    alert('Ошибка добавления в корзину');
+  }
+};
 
   // Настройки слайдера
   const sliderSettings = {
@@ -102,7 +104,7 @@ const ShopHomepage = () => {
               <div key={product.id} className="px-2">
                 <ProductCard
                   title={product.name}
-                  price={`$${product.price}`}
+                  price={`BYN  ${product.price}`}
                   image={product.image}
                   inStock={product.in_stock}
                   stock={product.stock}
@@ -150,7 +152,7 @@ const ProductCard = ({ title, price, image, inStock, stock, productId, addToCart
             onClick={() => addToCart(productId)}
             disabled={!inStock}
           >
-            {inStock ? 'Add to cart' : 'Нет в наличии'}
+            {inStock ? 'Добавить в корзину' : 'Нет в наличии'}
           </button>
         </div>
       </div>

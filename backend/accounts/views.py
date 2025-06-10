@@ -4,10 +4,17 @@ from .serializers import MyTokenObtainPairSerializer, RegisterSerializer, UserSe
 from django.contrib.auth import get_user_model
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.generics import ListAPIView
+from rest_framework.permissions import IsAdminUser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import UpdateAPIView
 
 User = get_user_model()
+
+class UserListView(ListAPIView):
+    queryset = get_user_model().objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAdminUser]
 
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer

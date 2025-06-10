@@ -1,6 +1,9 @@
+// ProductDetail.js
+
 import React, { useEffect, useState } from 'react';
 import './FormOrders.css';
 import { useParams, Link } from "react-router-dom";
+import { useNotification } from '../../context/NotificationContext'; // ✅ Подключаем контекст
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -18,8 +21,10 @@ const ProductDetail = () => {
     paymentMethod: 'card'
   });
   const [errors, setErrors] = useState({});
-
   const isProductLoaded = product && !loading && !error;
+
+  // ✅ Используем хук уведомлений
+  const { showSuccessToast, showErrorToast } = useNotification();
 
   // Загрузка товара
   useEffect(() => {
@@ -39,32 +44,38 @@ const ProductDetail = () => {
   }, [id]);
 
   // Функция добавления в корзину
-    const addToCart = async () => {
-      try {
-        const token = localStorage.getItem('access');
-        if (!token) {
-          alert('Вы не авторизованы');
-          return;
-        }
-
-        const response = await fetch('http://localhost:8000/api/cart/add/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`,
-          },
-          body: JSON.stringify({ product_id: product.id }),
-        });
-
-        if (!response.ok) throw new Error('Ошибка добавления в корзину');
-
-        alert('Товар добавлен в корзину');
-        window.dispatchEvent(new Event('cartUpdated'));
-      } catch (err) {
-        console.error(err);
-        alert('Ошибка добавления в корзину');
+  const addToCart = async () => {
+    try {
+      setLoading(true);
+      const token = localStorage.getItem('access');
+      if (!token) {
+        showErrorToast('Вы не авторизованы'); // ❌
+        return;
       }
-};
+
+      const response = await fetch(`http://localhost:8000/api/cart/add/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ product_id: id }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        const errorMessage = errorData.detail || 'Ошибка добавления в корзину';
+        throw new Error(errorMessage);
+      }
+
+      showSuccessToast('Товар успешно добавлен в корзину'); // ✅
+
+    } catch (err) {
+      showErrorToast(err.message || 'Ошибка добавления в корзину'); // ❌
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Обработчик изменения полей формы
   const handleChange = (e) => {
@@ -97,14 +108,14 @@ const ProductDetail = () => {
     e.preventDefault();
     if (!validate()) return;
     if (!product?.id) {
-      alert('Ошибка: товар не загружен');
+      showErrorToast('Ошибка: товар не загружен'); // ❌
       return;
     }
     setIsSubmitting(true);
     try {
       const token = localStorage.getItem('access');
       if (!token) {
-        alert('Вы не авторизованы');
+        showErrorToast('Вы не авторизованы'); // ❌
         return;
       }
 
@@ -126,16 +137,15 @@ const ProductDetail = () => {
         },
         body: JSON.stringify(orderData),
       });
-      console.log('Отправляемый JSON:', orderData);
 
       if (!response.ok) throw new Error('Ошибка оформления заказа');
 
-      alert('Заказ оформлен!');
+      showSuccessToast('Заказ оформлен успешно!'); // ✅
       setShowCheckout(false);
       window.dispatchEvent(new Event('cartUpdated'));
+
     } catch (err) {
-      console.error(err);
-      alert('Ошибка оформления заказа');
+      showErrorToast('Ошибка оформления заказа'); // ❌
     } finally {
       setIsSubmitting(false);
     }
@@ -165,13 +175,11 @@ const ProductDetail = () => {
             style={{ maxHeight: '500px', objectFit: 'cover' }}
           />
         </div>
-
         <div className="col-md-6">
           <h1 className="display-5 fw-bolder">{product.name}</h1>
           <div className="fs-5 mb-3">
-            <span>${parseFloat(product.price).toFixed(2)}</span>
+            <span>{parseFloat(product.price).toFixed(2)} BYN</span>
           </div>
-
           <p className="lead">{product.description}</p>
 
           {/* Характеристики */}

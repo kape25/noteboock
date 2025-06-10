@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Link } from "react-router-dom";
+import { useNotification } from '../../context/NotificationContext';
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
@@ -18,11 +19,15 @@ const Catalog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
+
   useEffect(() => {
     fetch('http://localhost:8000/api/products/')
       .then(res => res.json())
       .then(data => setProducts(data))
-      .catch(err => setError('Ошибка загрузки товаров'))
+      .catch(err => {
+        setError('Ошибка загрузки товаров');
+        showErrorToast('Ошибка загрузки товаров'); // ✅ Показываем ошибку
+      })
       .finally(() => setLoading(false));
   }, []);
 
@@ -189,31 +194,36 @@ const Catalog = () => {
 };
 
 const ProductCard = ({ product }) => {
+  const { showSuccessToast, showErrorToast } = useNotification();
   const addToCart = async (productId) => {
-    try {
-      const token = localStorage.getItem('access');
-      if (!token) {
-        alert('Вы не авторизованы');
-        return;
-      }
+  if (!productId) {
+    showErrorToast('Не удалось получить ID товара');
+    return;
+  }
 
-      const response = await fetch('http://localhost:8000/api/cart/add/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-        body: JSON.stringify({ product_id: productId }),
-      });
-
-      if (!response.ok) throw new Error('Ошибка добавления в корзину');
-
-      alert('Товар добавлен в корзину');
-    } catch (err) {
-      console.error(err);
-      alert('Ошибка добавления в корзину');
+  try {
+    const token = localStorage.getItem('access');
+    if (!token) {
+      showErrorToast('Вы не авторизованы');
+      return;
     }
-  };
+
+    const response = await fetch('http://localhost:8000/api/cart/add/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify({ product_id: productId }),
+    });
+
+    if (!response.ok) throw new Error('Ошибка добавления в корзину');
+
+    showSuccessToast('Товар успешно добавлен в корзину');
+  } catch (err) {
+    showErrorToast(err.message || 'Ошибка добавления в корзину');
+  }
+};
 
   return (
     <div className="col mb-4">
@@ -231,7 +241,7 @@ const ProductCard = ({ product }) => {
         />
         <div className="card-body d-flex flex-column">
           <h5 className="fw-bolder">{product.name}</h5>
-          <p className="text-muted">${parseFloat(product.price).toFixed(2)}</p>
+          <p className="text-muted"> {parseFloat(product.price).toFixed(2)} BYN </p>
 
           {/* Характеристики */}
           {product.brand && <small><strong>Марка:</strong> {product.brand}</small>}

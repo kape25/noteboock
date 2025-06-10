@@ -19,17 +19,27 @@ export default function Register() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post('http://localhost:8000/register/', form);
-      localStorage.setItem('access', 'temp_token'); // временный токен или можно получить из ответа
-      login(); // <-- обновляем состояние
-      navigate('/login');
-    } catch (error) {
-      alert('Ошибка регистрации. Проверьте данные.');
-    }
-  };
+  e.preventDefault();
+  try {
+    const response = await axios.post('http://localhost:8000/register/', form);
 
+    if (response.status === 201 || response.status === 200) {
+      // Можно сразу логинить, если сервер возвращает токены
+      navigate('/login');
+    } else {
+      alert('Ошибка регистрации. Попробуйте снова.');
+    }
+  } catch (error) {
+    console.error('Ошибка регистрации:', error);
+    // Выводим ошибку из ответа сервера, если она есть
+    const errMsg =
+      error.response?.data?.detail ||
+      error.response?.data?.nickname?.[0] ||
+      error.response?.data?.email?.[0] ||
+      'Ошибка регистрации. Проверьте данные.';
+    alert(errMsg);
+  }
+};
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <div className="card p-4 shadow-sm" style={{ width: '100%', maxWidth: '500px' }}>

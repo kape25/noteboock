@@ -223,9 +223,9 @@ export default function Cart() {
                 <div className="col-md-7">
                   <div className="card-body">
                     <h5 className="card-title">{item.name}</h5>
-                    <p className="card-text">Цена: <strong>{item.price} $</strong></p>
+                    <p className="card-text">Цена: <strong>{item.price} </strong></p>
                     <p className="card-text">Количество: <strong>{item.quantity || 1}</strong></p>
-                    <p className="card-text">Сумма: <strong>{(item.price * (item.quantity || 1)).toFixed(2)} $</strong></p>
+                    <p className="card-text">Сумма: <strong>{(item.price * (item.quantity || 1)).toFixed(2)} BYN</strong></p>
                   </div>
                 </div>
                 <div className="col-md-3 d-flex align-items-center justify-content-center">
@@ -241,7 +241,7 @@ export default function Cart() {
           ))}
 
           <div className="d-flex justify-content-between align-items-center mt-4 p-3 bg-light rounded">
-            <h5 className="mb-0">Итого: <strong>{getTotalPrice()} $</strong></h5>
+            <h5 className="mb-0">Итого: <strong>{getTotalPrice()} BYN</strong></h5>
             <button
               className="btn btn-success btn-lg"
               onClick={() => setShowCheckout(true)}
