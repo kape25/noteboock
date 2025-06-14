@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import AddToCartView, CartDetailView, RemoveFromCartView, OrderCreateView, UpdateCartItemView, \
-    AdminOrderListView, dashboard_data, update_order_status, delete_user
+    AdminOrderListView, dashboard_data, update_order_status, delete_user, MyOrdersView, OrderDeleteView
 
 urlpatterns = [
     path('cart/add/', AddToCartView.as_view(), name='add_to_cart'),
@@ -12,4 +12,6 @@ urlpatterns = [
     path('dashboard/', dashboard_data),
     path('orders/<int:order_id>/', update_order_status),
     path('users/<int:user_id>/', delete_user),
+    path('orders/my/', MyOrdersView.as_view(), name='my-orders'),
+    path('orders/<int:pk>/delete/', OrderDeleteView.as_view(), name='order-delete'),
 ]

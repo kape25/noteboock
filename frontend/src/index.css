@@ -1,63 +1,28 @@
-.header-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-/* Увеличение высоты хедера */
-.navbar {
-  height: 10px; /* Можно настроить высоту */
-}
-
-/* Стили для логотипа */
-.navbar-brand img {
-  height: 5px; /* Высота логотипа */
-}
-
-/* Стили для кнопок */
-.btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
+/* src/index.css */
+.bg-dark {
+  background-color: #1e2125 !important; /* Жёлтый фон */
 }
 
 .btn-primary {
-  background-color: #0d6efd;
-  color: white;
+  background-color: #f8e600;
+  border-color: #f8e600;
+  color: #000;
 }
 
 .btn-primary:hover {
-  background-color: #0b5ed7;
+  background-color: #d9c700;
+  border-color: #d9c700;
 }
 
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
 }
 
-.btn-secondary:hover {
-  background-color: #5a6268;
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #218838;
 }
-
-.btn-danger {
-  background-color: #dc3545;
-  color: white;
-}
-
-.btn-danger:hover {
-  background-color: #bd2130;
-}
-
-.btn-outline-secondary {
-  background-color: transparent;
-  border: 1px solid #6c757d;
-  color: #6c757d;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #e9ecef;
-}
-
 
 
 

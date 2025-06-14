@@ -9,7 +9,6 @@ const Dashboard = () => {
     totalCost: 0,
     totalOrders: 0,
   });
-
   const [pagination, setPagination] = useState({
     userPage: 1,
     orderPage: 1,
@@ -18,32 +17,27 @@ const Dashboard = () => {
     userPages: 1,
     orderPages: 1,
   });
-
   const [filters, setFilters] = useState({
     period: 'all',
     searchUser: '',
     searchOrder: '',
   });
-
   const deliveryMethods = {
     courier: 'Курьером',
     pickup: 'Самовывоз',
     post: 'Почта',
   };
-
   const paymentMethods = {
     card: 'Картой',
     cash: 'Наличными',
     bank: 'Банковский перевод',
   };
-
   const orderStatuses = {
     pending: 'В ожидании',
     confirmed: 'Оплачен',
     shipped: 'Отправлен',
     cancelled: 'Отменён',
   };
-
   const token = localStorage.getItem('access'); // Получаем токен
 
   // Загрузка данных
@@ -57,7 +51,12 @@ const Dashboard = () => {
         order_page: pagination.orderPage,
       });
 
-      const response = await axios.get(`http://127.0.0.1:8000/api/dashboard/?${params}`);
+      const response = await axios.get(`http://127.0.0.1:8000/api/dashboard/?${params}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
       const data = response.data;
 
       setUsers(data.users || []);
@@ -154,7 +153,7 @@ const Dashboard = () => {
   const handleDeleteOrder = async (orderId) => {
     if (!window.confirm('Вы уверены, что хотите удалить этот заказ?')) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/orders/${orderId}/`, {
+      await axios.delete(`http://127.0.0.1:8000/api/orders/${orderId}/delete/`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setOrders(orders.filter(order => order.id !== orderId));
@@ -162,7 +161,7 @@ const Dashboard = () => {
       console.error('Ошибка при удалении заказа:', error);
       alert('Не удалось удалить заказ');
     }
-  };
+};
 
   // Автообновление данных
   useEffect(() => {
@@ -210,7 +209,7 @@ const Dashboard = () => {
           <Card bg="info" text="white">
             <Card.Body>
               <Card.Title>Пользователи</Card.Title>
-              <Card.Text className="display-5">{users.length}</Card.Text>
+              <Card.Text className="display-5">{pagination.userCount}</Card.Text>
             </Card.Body>
           </Card>
         </div>
@@ -266,6 +265,7 @@ const Dashboard = () => {
               ))}
             </tbody>
           </Table>
+
           {/* Пагинация пользователей */}
           <div className="d-flex justify-content-between">
             <Button variant="secondary" onClick={goToPrevUserPage} disabled={pagination.userPage === 1}>
@@ -324,6 +324,7 @@ const Dashboard = () => {
               ))}
             </tbody>
           </Table>
+
           {/* Пагинация заказов */}
           <div className="d-flex justify-content-between">
             <Button variant="secondary" onClick={goToPrevOrderPage} disabled={pagination.orderPage === 1}>

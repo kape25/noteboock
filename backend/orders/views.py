@@ -1,9 +1,9 @@
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
-from rest_framework.pagination import PageNumberPagination
 from rest_framework import status, generics, permissions, serializers
 from rest_framework.permissions import IsAuthenticated
-from .models import OrderItem, CartItem  # Добавили CartItem
+from .models import OrderItem, CartItem
 from .serializers import OrderCreateSerializer, CartItemSerializer, OrderSerializer
 from laptops.models import Product
 from django.contrib.auth import get_user_model
@@ -17,6 +17,7 @@ from .models import User, Order
 from accounts.serializers import UserSerializer
 from django.core.paginator import Paginator
 from django.db.models import Q
+from rest_framework.generics import ListAPIView
 
 
 User = get_user_model()
@@ -270,3 +271,20 @@ def dashboard_data(request):
             'current_page': order_page_obj.number,
         }
     })
+
+class MyOrdersView(ListAPIView):
+    serializer_class = OrderSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
+
+
+class OrderDeleteView(generics.DestroyAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        return Order.objects.filter(user=user)
