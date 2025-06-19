@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="рабочий проект(добавил карточки, оформление заказа корзины и с карточки товара) добавил админскую панель.окна уведомлений">
+    <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="готовый проект">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/catalog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/catalog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/AdminRoute.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,7 @@
       <workItem from="1749814515339" duration="466000" />
       <workItem from="1749815098363" duration="14099000" />
       <workItem from="1749900292503" duration="8450000" />
-      <workItem from="1750342638882" duration="4206000" />
+      <workItem from="1750342638882" duration="5184000" />
     </task>
     <task id="LOCAL-00001" summary="registe/login/profile">
       <option name="closed" value="true" />
@@ -174,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749909015425</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="готовый проект">
+      <option name="closed" value="true" />
+      <created>1750347150818</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750347150818</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +202,8 @@
     <MESSAGE value="рабочий проект(добавил карточки, оформление заказа)" />
     <MESSAGE value="рабочий проект(добавил карточки, оформление заказа корзины и с карточки товара)" />
     <MESSAGE value="рабочий проект(добавил карточки, оформление заказа корзины и с карточки товара) добавил админскую панель.окна уведомлений" />
-    <option name="LAST_COMMIT_MESSAGE" value="рабочий проект(добавил карточки, оформление заказа корзины и с карточки товара) добавил админскую панель.окна уведомлений" />
+    <MESSAGE value="готовый проект" />
+    <option name="LAST_COMMIT_MESSAGE" value="готовый проект" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
