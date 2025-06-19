@@ -19,27 +19,54 @@ export default function Register() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const response = await axios.post('http://localhost:8000/register/', form);
+    e.preventDefault();
 
-    if (response.status === 201 || response.status === 200) {
-      // Можно сразу логинить, если сервер возвращает токены
-      navigate('/login');
-    } else {
-      alert('Ошибка регистрации. Попробуйте снова.');
+    // Валидация
+    if (!/^[a-zA-Z0-9]+$/.test(form.nickname)) {
+      alert('Никнейм должен содержать только буквы и цифры');
+      return;
     }
-  } catch (error) {
-    console.error('Ошибка регистрации:', error);
-    // Выводим ошибку из ответа сервера, если она есть
-    const errMsg =
-      error.response?.data?.detail ||
-      error.response?.data?.nickname?.[0] ||
-      error.response?.data?.email?.[0] ||
-      'Ошибка регистрации. Проверьте данные.';
-    alert(errMsg);
-  }
-};
+
+    if (!/^[a-zA-Z]+$/.test(form.first_name)) {
+      alert('Имя должно содержать только буквы');
+      return;
+    }
+
+    if (!/^[a-zA-Z]+$/.test(form.last_name)) {
+      alert('Фамилия должна содержать только буквы');
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(form.email)) {
+      alert('Введите корректный email');
+      return;
+    }
+
+    if (form.password.length < 8) {
+      alert('Пароль должен быть не короче 8 символов');
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:8000/register/', form);
+
+      if (response.status === 201 || response.status === 200) {
+        alert('Регистрация успешна!');
+        navigate('/login');
+      } else {
+        alert('Ошибка регистрации. Попробуйте снова.');
+      }
+    } catch (error) {
+      console.error('Ошибка регистрации:', error);
+      const errMsg =
+        error.response?.data?.detail ||
+        error.response?.data?.nickname?.[0] ||
+        error.response?.data?.email?.[0] ||
+        'Ошибка регистрации. Проверьте данные.';
+      alert(errMsg);
+    }
+  };
+
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <div className="card p-4 shadow-sm" style={{ width: '100%', maxWidth: '500px' }}>
@@ -53,7 +80,7 @@ export default function Register() {
               id="nickname"
               name="nickname"
               className="form-control"
-              placeholder="Введите никнейм"
+              placeholder="Только буквы и цифры"
               value={form.nickname}
               onChange={handleChange}
               required
@@ -68,7 +95,7 @@ export default function Register() {
               id="email"
               name="email"
               className="form-control"
-              placeholder="Введите email"
+              placeholder="example@example.com"
               value={form.email}
               onChange={handleChange}
               required
@@ -83,7 +110,7 @@ export default function Register() {
               id="first_name"
               name="first_name"
               className="form-control"
-              placeholder="Введите имя"
+              placeholder="Только буквы"
               value={form.first_name}
               onChange={handleChange}
               required
@@ -98,7 +125,7 @@ export default function Register() {
               id="last_name"
               name="last_name"
               className="form-control"
-              placeholder="Введите фамилию"
+              placeholder="Только буквы"
               value={form.last_name}
               onChange={handleChange}
               required
@@ -113,7 +140,7 @@ export default function Register() {
               id="password"
               name="password"
               className="form-control"
-              placeholder="Введите пароль"
+              placeholder="Не менее 8 символов"
               value={form.password}
               onChange={handleChange}
               required
@@ -128,4 +155,4 @@ export default function Register() {
       </div>
     </div>
   );
-}
+};

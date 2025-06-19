@@ -6,26 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a4c43f4e-f0f5-442e-ae48-afa1c96277e8" name="Changes" comment="рабочий проект(добавил карточки, оформление заказа корзины и с карточки товара) добавил админскую панель.окна уведомлений">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AdminDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/catalog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShopHomepage/catalog.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +76,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ laptopshop_project\frontend\src\components\Footer" />
+      <recent name="F:\ laptopshop_project\frontend\public" />
       <recent name="F:\ laptopshop_project\frontend\src\components\Header" />
+      <recent name="F:\ laptopshop_project\frontend\src\components\Footer" />
       <recent name="F:\ laptopshop_project\frontend\src\components" />
       <recent name="F:\ laptopshop_project\frontend" />
-      <recent name="F:\ laptopshop_project\frontend\src\pages\ShopHomepage" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -130,7 +115,8 @@
       <workItem from="1749812364023" duration="479000" />
       <workItem from="1749814515339" duration="466000" />
       <workItem from="1749815098363" duration="14099000" />
-      <workItem from="1749900292503" duration="8008000" />
+      <workItem from="1749900292503" duration="8450000" />
+      <workItem from="1750342638882" duration="4206000" />
     </task>
     <task id="LOCAL-00001" summary="registe/login/profile">
       <option name="closed" value="true" />
@@ -180,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749591515743</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="рабочий проект(добавил карточки, оформление заказа корзины и с карточки товара) добавил админскую панель.окна уведомлений">
+      <option name="closed" value="true" />
+      <created>1749909015425</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749909015425</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -225,7 +225,7 @@ const Dashboard = () => {
           <Card bg="warning" text="dark">
             <Card.Body>
               <Card.Title>Общая сумма</Card.Title>
-              <Card.Text className="display-5">{stats.totalCost.toFixed(2)} ₽</Card.Text>
+              <Card.Text className="display-5">{stats.totalCost.toFixed(2)} BYN</Card.Text>
             </Card.Body>
           </Card>
         </div>
@@ -297,7 +297,7 @@ const Dashboard = () => {
                 <tr key={order.id}>
                   <td>{order.id}</td>
                   <td>{order.full_name}</td>
-                  <td>{parseFloat(order.total_price).toFixed(2)} ₽</td>
+                  <td>{parseFloat(order.total_price).toFixed(2)} BYN</td>
                   <td>{new Date(order.created_at).toLocaleDateString()}</td>
                   <td>
                     <Form.Select

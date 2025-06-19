@@ -12,29 +12,37 @@ const Catalog = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState('');
+  const [selectedModel, setSelectedModel] = useState('');
   const [selectedRAM, setSelectedRAM] = useState('');
   const [selectedStorage, setSelectedStorage] = useState('');
+  const [selectedScreenSize, setSelectedScreenSize] = useState('');
+  const [selectedProcessor, setSelectedProcessor] = useState('');
 
   // Пагинация
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
+  const { showErrorToast } = useNotification();
 
+  // Загрузка товаров
   useEffect(() => {
     fetch('http://localhost:8000/api/products/')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => {
         setError('Ошибка загрузки товаров');
-        showErrorToast('Ошибка загрузки товаров'); // ✅ Показываем ошибку
+        showErrorToast('Ошибка загрузки товаров');
       })
       .finally(() => setLoading(false));
   }, []);
 
   // Получаем уникальные значения для фильтров
   const brands = [...new Set(products.map(p => p.brand).filter(Boolean))];
+  const models = [...new Set(products.map(p => p.model).filter(Boolean))];
   const rams = [...new Set(products.map(p => p.ram).filter(Boolean))];
   const storages = [...new Set(products.map(p => p.storage).filter(Boolean))];
+  const screenSizes = [...new Set(products.map(p => p.screen_size).filter(Boolean))];
+  const processors = [...new Set(products.map(p => p.processor).filter(Boolean))];
 
   // Фильтрация
   const filteredProducts = products.filter(product => {
@@ -42,14 +50,27 @@ const Catalog = () => {
       product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.model?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.screen_size?.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.processor?.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesBrand = selectedBrand ? product.brand === selectedBrand : true;
+    const matchesModel = selectedModel ? product.model === selectedModel : true;
     const matchesRAM = selectedRAM ? product.ram == selectedRAM : true;
     const matchesStorage = selectedStorage ? product.storage == selectedStorage : true;
+    const matchesScreenSize = selectedScreenSize ? product.screen_size === selectedScreenSize : true;
+    const matchesProcessor = selectedProcessor ? product.processor === selectedProcessor : true;
     const matchesStock = inStockOnly ? product.in_stock : true;
 
-    return matchesSearch && matchesBrand && matchesRAM && matchesStorage && matchesStock;
+    return (
+      matchesSearch &&
+      matchesBrand &&
+      matchesModel &&
+      matchesRAM &&
+      matchesStorage &&
+      matchesScreenSize &&
+      matchesProcessor &&
+      matchesStock
+    );
   });
 
   // Пагинация
@@ -118,6 +139,22 @@ const Catalog = () => {
               </select>
             </div>
 
+            {/* Модель */}
+            <div className="mb-3">
+              <label htmlFor="modelFilter" className="form-label">Модель</label>
+              <select
+                id="modelFilter"
+                className="form-select"
+                value={selectedModel}
+                onChange={(e) => setSelectedModel(e.target.value)}
+              >
+                <option value="">Все</option>
+                {models.map((model, i) => (
+                  <option key={i} value={model}>{model}</option>
+                ))}
+              </select>
+            </div>
+
             {/* RAM */}
             <div className="mb-3">
               <label htmlFor="ramFilter" className="form-label">Память (ГБ)</label>
@@ -146,6 +183,38 @@ const Catalog = () => {
                 <option value="">Все</option>
                 {storages.sort().map((storage, i) => (
                   <option key={i} value={storage}>{storage} ГБ</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Размер экрана */}
+            <div className="mb-3">
+              <label htmlFor="screenSizeFilter" className="form-label">Размер экрана</label>
+              <select
+                id="screenSizeFilter"
+                className="form-select"
+                value={selectedScreenSize}
+                onChange={(e) => setSelectedScreenSize(e.target.value)}
+              >
+                <option value="">Все</option>
+                {screenSizes.sort().map((size, i) => (
+                  <option key={i} value={size}>{size}"</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Процессор */}
+            <div className="mb-3">
+              <label htmlFor="processorFilter" className="form-label">Процессор</label>
+              <select
+                id="processorFilter"
+                className="form-select"
+                value={selectedProcessor}
+                onChange={(e) => setSelectedProcessor(e.target.value)}
+              >
+                <option value="">Все</option>
+                {processors.map((proc, i) => (
+                  <option key={i} value={proc}>{proc}</option>
                 ))}
               </select>
             </div>
@@ -193,37 +262,35 @@ const Catalog = () => {
   );
 };
 
+// Компонент карточки товара
 const ProductCard = ({ product }) => {
   const { showSuccessToast, showErrorToast } = useNotification();
-  const addToCart = async (productId) => {
-  if (!productId) {
-    showErrorToast('Не удалось получить ID товара');
-    return;
-  }
 
-  try {
-    const token = localStorage.getItem('access');
-    if (!token) {
-      showErrorToast('Вы не авторизованы');
+  const addToCart = async (productId) => {
+    if (!productId) {
+      showErrorToast('Не удалось получить ID товара');
       return;
     }
-
-    const response = await fetch('http://localhost:8000/api/cart/add/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-      body: JSON.stringify({ product_id: productId }),
-    });
-
-    if (!response.ok) throw new Error('Ошибка добавления в корзину');
-
-    showSuccessToast('Товар успешно добавлен в корзину');
-  } catch (err) {
-    showErrorToast(err.message || 'Ошибка добавления в корзину');
-  }
-};
+    try {
+      const token = localStorage.getItem('access');
+      if (!token) {
+        showErrorToast('Вы не авторизованы');
+        return;
+      }
+      const response = await fetch('http://localhost:8000/api/cart/add/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ product_id: productId }),
+      });
+      if (!response.ok) throw new Error('Ошибка добавления в корзину');
+      showSuccessToast('Товар успешно добавлен в корзину');
+    } catch (err) {
+      showErrorToast(err.message || 'Ошибка добавления в корзину');
+    }
+  };
 
   return (
     <div className="col mb-4">
@@ -256,13 +323,9 @@ const ProductCard = ({ product }) => {
         {/* Кнопки */}
         <div className="card-footer text-center">
           <div className="d-grid gap-2">
-            <Link
-              to={`/product/${product.id}`}
-              className="btn btn-outline-dark"
-            >
+            <Link to={`/product/${product.id}`} className="btn btn-outline-dark">
               Посмотреть карточку товара
             </Link>
-
             <button
               className="btn btn-outline-dark"
               onClick={() => addToCart(product.id)}
