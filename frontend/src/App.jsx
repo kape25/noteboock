@@ -14,9 +14,6 @@ import Catalog from './pages/ShopHomepage/catalog';
 import ProductDetail from './pages/ShopHomepage/ProductDetail';
 import AdminDashboard from './components/AdminDashboard';
 
-// Защита маршрута для админа
-import AdminRoute from './context/AdminRoute';
-
 function App() {
   return (
     <div className="app d-flex flex-column min-vh-100">
@@ -33,10 +30,8 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/product/:id" element={<ProductDetail />} />
 
-          {/* Защищённый маршрут */}
-          <Route path="/admin" element={<AdminRoute />}>
-            <Route path="dashboard" element={<AdminDashboard />} />
-          </Route>
+          {/* Открытый маршрут */}
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </main>
 

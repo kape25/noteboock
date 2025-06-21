@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useAuth } from '../context/AuthContext'; // импортируем хук
+import { useAuth } from '../context/AuthContext'; // Предположим, что login есть в AuthContext
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -11,8 +11,10 @@ export default function Register() {
     first_name: '',
     last_name: '',
   });
+
+  const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { login } = useAuth(); // получаем функцию login
+  const { login } = useAuth(); // получаем функцию login из контекста
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -20,50 +22,47 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Валидация
-    if (!/^[a-zA-Z0-9]+$/.test(form.nickname)) {
-      alert('Никнейм должен содержать только буквы и цифры');
-      return;
-    }
-
-    if (!/^[a-zA-Z]+$/.test(form.first_name)) {
-      alert('Имя должно содержать только буквы');
-      return;
-    }
-
-    if (!/^[a-zA-Z]+$/.test(form.last_name)) {
-      alert('Фамилия должна содержать только буквы');
-      return;
-    }
-
-    if (!/\S+@\S+\.\S+/.test(form.email)) {
-      alert('Введите корректный email');
-      return;
-    }
-
-    if (form.password.length < 8) {
-      alert('Пароль должен быть не короче 8 символов');
-      return;
-    }
+    setError('');
 
     try {
+      // Регистрация на бэкенде
       const response = await axios.post('http://localhost:8000/register/', form);
 
       if (response.status === 201 || response.status === 200) {
         alert('Регистрация успешна!');
-        navigate('/login');
-      } else {
-        alert('Ошибка регистрации. Попробуйте снова.');
+
+        // Если бэкенд возвращает токены — автоматически логиним пользователя
+        if (response.data.access && response.data.refresh && response.data.user) {
+          login({
+            access: response.data.access,
+            refresh: response.data.refresh,
+            user: response.data.user,
+          });
+        }
+
+        navigate('/login'); // перенаправляем на профиль
       }
-    } catch (error) {
-      console.error('Ошибка регистрации:', error);
-      const errMsg =
-        error.response?.data?.detail ||
-        error.response?.data?.nickname?.[0] ||
-        error.response?.data?.email?.[0] ||
-        'Ошибка регистрации. Проверьте данные.';
-      alert(errMsg);
+    } catch (err) {
+      console.error('Ошибка регистрации:', err);
+
+      // Более точная обработка ошибок
+      let errMsg = 'Ошибка регистрации. Проверьте данные.';
+
+      if (err.response?.data?.detail) {
+        errMsg = err.response.data.detail;
+      } else if (err.response?.data?.email?.[0]) {
+        errMsg = err.response.data.email[0];
+      } else if (err.response?.data?.password?.[0]) {
+        errMsg = err.response.data.password[0];
+      } else if (err.response?.data?.nickname?.[0]) {
+        errMsg = err.response.data.nickname[0];
+      } else if (err.response?.data?.first_name?.[0]) {
+        errMsg = err.response.data.first_name[0];
+      } else if (err.response?.data?.last_name?.[0]) {
+        errMsg = err.response.data.last_name[0];
+      }
+
+      setError(errMsg);
     }
   };
 
@@ -71,6 +70,9 @@ export default function Register() {
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <div className="card p-4 shadow-sm" style={{ width: '100%', maxWidth: '500px' }}>
         <h4 className="mb-4 text-center">Регистрация</h4>
+
+        {error && <div className="alert alert-danger">{error}</div>}
+
         <form onSubmit={handleSubmit}>
           {/* Nickname */}
           <div className="mb-3">
@@ -80,7 +82,6 @@ export default function Register() {
               id="nickname"
               name="nickname"
               className="form-control"
-              placeholder="Только буквы и цифры"
               value={form.nickname}
               onChange={handleChange}
               required
@@ -95,7 +96,6 @@ export default function Register() {
               id="email"
               name="email"
               className="form-control"
-              placeholder="example@example.com"
               value={form.email}
               onChange={handleChange}
               required
@@ -110,7 +110,6 @@ export default function Register() {
               id="first_name"
               name="first_name"
               className="form-control"
-              placeholder="Только буквы"
               value={form.first_name}
               onChange={handleChange}
               required
@@ -125,7 +124,6 @@ export default function Register() {
               id="last_name"
               name="last_name"
               className="form-control"
-              placeholder="Только буквы"
               value={form.last_name}
               onChange={handleChange}
               required
@@ -140,7 +138,6 @@ export default function Register() {
               id="password"
               name="password"
               className="form-control"
-              placeholder="Не менее 8 символов"
               value={form.password}
               onChange={handleChange}
               required
@@ -155,4 +152,4 @@ export default function Register() {
       </div>
     </div>
   );
-};
+}
